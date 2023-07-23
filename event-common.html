@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="clicking-method"></p>
+    <input id="name-filed" type="text">
+    <button id="update-name">update</button>
+    <button onclick="handleJustFunctionClick()">just function</button>
+    <button>direct add event</button>
+    <script>
+        function handleJustFunctionClick() {
+            const clickingMethod = document.getElementById('clicking-method');
+            clickingMethod.innerText = 'set by using by function'
+        }
+        // direct
+        document.getElementById('update-name').addEventListener('click', function () {
+            const nameFiled = document.getElementById('name-filed');
+            const p = document.getElementById('clicking-method');
+            p.innerText = nameFiled.value;
+            nameFiled.value = '';
+        })
+    </script>
+</body>
+
+</html>

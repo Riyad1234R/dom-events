@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+</head>
+
+<body>
+    <h2>Add your comment!!</h2>
+    <section>
+        <h4>your comments</h4>
+        <div id="comment-container">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam asperiores, architecto
+                officia odit repellat magni exercitationem eveniet pariatur animi corporis quis omnis nobis accusantium
+                dicta facere blanditiis, sapiente debitis?</p>
+            <p>Vero suscipit officia quas deleniti doloribus facilis cupiditate iure repudiandae accusantium
+                necessitatibus a, cum, ad quasi, sit doloremque nostrum maxime ea exercitationem illum! Blanditiis, fuga
+                libero impedit quo accusamus sequi.</p>
+            <p>Libero doloribus neque, culpa ad veniam praesentium sit, minima ducimus dolorum perferendis repudiandae?
+                Magni at odit, voluptate cumque veniam quisquam incidunt error perferendis aliquam aut perspiciatis
+                repellendus eum veritatis dignissimos.</p>
+        </div>
+        <div>
+            <textarea name="" id="new-comment" cols="60" rows="4"></textarea>
+            <br>
+            <button id="submit-comment">post</button>
+        </div>
+    </section>
+    <script>
+        // 1.set button
+        document.getElementById('submit-comment').addEventListener('click', function () {
+            //2. get user comment
+            const commentBox = document.getElementById('new-comment')
+            // const userComment = commentBox.value;
+
+            // 3 creat comment pragraph
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+            // append the comment
+            const commentContainer = document.getElementById('comment-container')
+            commentContainer.appendChild(newComment);
+            // 5.clean the commentbox
+            commentBox.value = '';
+        })
+    </script>
+</body>
+
+</html>

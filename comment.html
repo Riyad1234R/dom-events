@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>More Events</h2>
+    <section>
+        <h3>very very important secret</h3>
+        <button id="delete-btn">delete</button>
+    </section>
+    <script>
+        // 1.set button
+        document.getElementById('submit-comment').addEventListener('click', function () {
+            //2. get user comment
+            const commentBox = document.getElementById('new-comment')
+            // const userComment = commentBox.value;
+
+            // 3 creat comment pragraph
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+            // append the comment
+            const commentContainer = document.getElementById('comment-container')
+            commentContainer.appendChild(newComment);
+            // 5.clean the commentbox
+            commentBox.value = '';
+        })
+    </script>
+</body>
+
+</html>
